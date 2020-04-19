@@ -7,6 +7,7 @@ Android Yeni Nesil Altın ve Döviz Uygulaması
 ![dovizKusuSS4](https://user-images.githubusercontent.com/43846778/79691373-c8c7c880-8267-11ea-98d2-84a5ddac074e.png)
 ![dovizKusuSS2](https://user-images.githubusercontent.com/43846778/79691369-c2d1e780-8267-11ea-966d-c88074a69abc.png)
 ![dovizKusuSS3](https://user-images.githubusercontent.com/43846778/79691371-c5ccd800-8267-11ea-9788-53cf4fa4c94f.png)
+![dovizKusuSS5](https://user-images.githubusercontent.com/43846778/79691693-bd759c80-8269-11ea-95ab-108f4ec56c8d.png)
 ![dovizKusuSS6](https://user-images.githubusercontent.com/43846778/79691378-cc5b4f80-8267-11ea-9bcb-a5556822bdcd.png)
 ![dovizKusuSS7](https://user-images.githubusercontent.com/43846778/79691380-cebda980-8267-11ea-9f9f-1884945f6669.png)
 ![dovizKusuSS8](https://user-images.githubusercontent.com/43846778/79691382-d1b89a00-8267-11ea-9218-51c6a983774d.png)
