@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/item0"
+        android:title="Doviz"
+        android:icon="@drawable/money" />
+
+    <item
+        android:id="@+id/item1"
+        android:title="Yenile"
+        android:icon="@drawable/ic_action_refresh" />
+
+    <item
+        android:id="@+id/item2"
+        android:title="Altın"
+        android:icon="@drawable/gold" />
+
+
+</menu>

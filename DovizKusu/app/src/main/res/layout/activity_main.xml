@@ -1,0 +1,2074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/FirstScreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/firstscreen"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/baslangicSorusuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="200dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/baslangicSorusuTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Istersen Uygulamayı Sana Özel Tasarlayabiliriz"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/cross_json"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-350dp"
+                android:layout_marginTop="35dp"
+                android:onClick="crossClicked"
+                android:textAlignment="center"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="cross.json"
+                app:lottie_loop="false" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/tick_json"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:onClick="tickClicked"
+                android:textAlignment="center"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="tick.json"
+                app:lottie_loop="false" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ilkkisim"
+            android:layout_width="wrap_content"
+            android:layout_height="203dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="200dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/cinsiyet_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="90dp"
+                android:fontFamily="casual"
+                android:text="Baslayalım Cinsiyetin Nedir?"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/male_json"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-370dp"
+                android:layout_marginTop="50dp"
+                android:onClick="maleClicked"
+                android:textAlignment="center"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="happyusermale.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/female_json"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="50dp"
+                android:onClick="femaleClicked"
+                android:textAlignment="center"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="happyuserfemale.json"
+                app:lottie_loop="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ikincikisim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="83dp"
+            android:layoutMode="opticalBounds"
+            android:textAlignment="center"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/isim_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="165dp"
+                android:layout_marginTop="185dp"
+                android:layout_marginRight="90dp"
+                android:fontFamily="casual"
+                android:text="Peki ya Ismin?"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/isimalici"
+                android:layout_width="290dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="-290dp"
+                android:hint="Sadece İsim Giriniz"
+                android:layout_marginTop="220dp"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sonkisim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:textAlignment="center"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/meslek_textview"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="90dp"
+                android:fontFamily="casual"
+                android:textSize="25dp"
+                android:text="Son Olarak Ne Isle Mesgulsun?"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/meslekImageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-50dp"
+            android:layout_marginLeft="-485dp">
+
+            <ImageView
+                android:id="@+id/doktor"
+                android:layout_width="167dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/doktor"
+                android:onClick="doktorButton" />
+
+            <ImageView
+                android:id="@+id/muhendis"
+                android:layout_width="167dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/muhendis"
+                android:onClick="muhendisButton" />
+
+            <ImageView
+                android:id="@+id/isadami"
+                android:layout_width="167dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="-345dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="270dp"
+                android:background="@drawable/isadami"
+                android:onClick="isadamiButton" />
+
+            <ImageView
+                android:id="@+id/calisan"
+                android:layout_width="167dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="270dp"
+                android:background="@drawable/calisan"
+                android:onClick="calisanButton" />
+
+            <ImageView
+                android:id="@+id/ogrenci"
+                android:layout_width="167dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="-345dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="340dp"
+                android:background="@drawable/ogrnc"
+                android:onClick="ogrenciButton" />
+
+            <ImageView
+                android:id="@+id/diger"
+                android:layout_width="167dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="340dp"
+                android:background="@drawable/diger"
+                android:onClick="digerButton" />
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lottieButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="300dp"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/greatLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="0dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="great.json"
+                app:lottie_loop="false" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/leftArrowLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-290dp"
+                android:layout_marginTop="0dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="arrowleft.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/rightArrowLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="0dp"
+                android:onClick="rightArrowClicked"
+                android:textAlignment="center"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="arrowright.json"
+                app:lottie_loop="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userInterfaceLY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/doktorLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="-200dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="doktor.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/muhendisLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-135dp"
+                android:layout_marginTop="-200dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="engineer.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/isadamiLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-135dp"
+                android:layout_marginTop="-200dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="isadami.json"
+                app:lottie_loop="true" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/isKadiniLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-135dp"
+                android:layout_marginTop="-200dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="bossgirl.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/calisanLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-135dp"
+                android:layout_marginTop="-200dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="calisan.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ogrenciLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-135dp"
+                android:layout_marginTop="-200dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="ogrenci.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/digerLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-135dp"
+                android:layout_marginTop="-200dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="othermale.json"
+                app:lottie_loop="true" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/digerKadinLottie"
+                android:layout_width="135dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-135dp"
+                android:layout_marginTop="-200dp"
+                android:onClick="leftArrowClicked"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintVertical_bias="0.065"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="othergirl.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/karsilamaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-270dp"
+                android:layout_marginTop="300dp"
+                android:textAlignment="center"
+                android:textSize="40dp" />
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/dovizScreenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/mainscreen"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/doktorKarsilamaJson"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="60dp"
+                    android:onClick="goSettings"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="doktor.json"
+                    app:lottie_loop="true" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/muhendisKarsilamaJson"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="engineer.json"
+                    app:lottie_loop="true" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/isadamiKarsilamaJson"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="isadami.json"
+                    app:lottie_loop="true" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/iskadiniKarsilamaJson"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="bossgirl.json"
+                    app:lottie_loop="true" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/calisanKarsilamaJson"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="calisan.json"
+                    app:lottie_loop="true" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/ogrenciKarsilamaJson"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="ogrenci.json"
+                    app:lottie_loop="true" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/digerErkekKarsilamaJson"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="othermale.json"
+                    app:lottie_loop="true"
+                    tools:visibility="invisible" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/digerKadinKarsilamaJson"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="othergirl.json"
+                    app:lottie_loop="true"
+                    tools:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/dovizScreenKarsilamaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="130dp"
+                    android:text="Bu Ekranı Özelleştirmek İçin Uygulamayı Yeniden Başlat veya Meslek Animasyonunu Kullan!"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/bottomArrowJson"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:onClick="goBottomDoviz"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="bottomarrowgold.json"
+                    app:lottie_loop="true" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/refresh_button"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:onClick="getRates"
+                    app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+                    app:layout_constraintEnd_toEndOf="@+id/bottomBar"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="@+id/bottomBar"
+                    app:layout_constraintTop_toTopOf="@+id/bottomBar"
+                    app:layout_constraintVertical_bias="0.065"
+                    app:lottie_autoPlay="false"
+                    app:lottie_fileName="refreshbird.json"
+                    app:lottie_loop="false" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/abd_dollar_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/abd_dollar_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/abddollar" />
+
+                    <TextView
+                        android:id="@+id/abd_dollar_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/abd_dollar_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/abd_dollar_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/abd_dollar_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/abd_dollar_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/euro_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/euro_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/eurosecond" />
+
+                    <TextView
+                        android:id="@+id/euro_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/euro_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/euro_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/euro_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/euro_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sterlin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/sterlin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/sterlin" />
+
+                    <TextView
+                        android:id="@+id/sterlin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/sterlin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/sterlin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/sterlin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/sterlin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/yuan_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/yuan_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/cinyuani" />
+
+                    <TextView
+                        android:id="@+id/yuan_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/yuan_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/yuan_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/yuan_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/yuan_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ruble_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/ruble_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/rusrublesi" />
+
+                    <TextView
+                        android:id="@+id/ruble_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ruble_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/ruble_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/ruble_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/ruble_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/au_dollar_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/au_dollar_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/audollar" />
+
+                    <TextView
+                        android:id="@+id/au_dollar_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/au_dollar_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/au_dollar_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/au_dollar_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/au_dollar_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/japon_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/japon_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/japonyeni" />
+
+                    <TextView
+                        android:id="@+id/japon_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/japon_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/japon_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/japon_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/japon_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dan_kronu_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/dan_kronu_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/danimarkakronu" />
+
+                    <TextView
+                        android:id="@+id/dan_kronu_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dan_kronu_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/dan_kronu_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/dan_kronu_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/dan_kronu_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dinar_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/dinar_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/kuveytdinari" />
+
+                    <TextView
+                        android:id="@+id/dinar_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dinar_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/dinar_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/dinar_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/dinar_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/frang_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/frang_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/isvicreprangi" />
+
+                    <TextView
+                        android:id="@+id/frang_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/frang_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/frang_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/frang_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/frang_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/riyal_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/riyal_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/suudiriyali" />
+
+                    <TextView
+                        android:id="@+id/riyal_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/riyal_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/riyal_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/riyal_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/riyal_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/isvicre_kron_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/isvicre_kron_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/isvicrekronu" />
+
+                    <TextView
+                        android:id="@+id/isvicre_kron_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/isvicre_kron_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/isvicre_kron_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/isvicre_kron_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/isvicre_kron_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnd_dollar_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/cnd_dollar_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/cnddollar" />
+
+                    <TextView
+                        android:id="@+id/cnd_dollar_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cnd_dollar_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/cnd_dollar_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/cnd_dollar_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/cnd_dollar_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/katar_riyal_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/katar_riyal_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/katarriyali" />
+
+                    <TextView
+                        android:id="@+id/katar_riyal_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/katar_riyal_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/katar_riyal_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/katar_riyal_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/katar_riyal_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/iran_riyal_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/iran_riyal_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/iranriyali" />
+
+                    <TextView
+                        android:id="@+id/iran_riyal_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iran_riyal_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/iran_riyal_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/iran_riyal_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/iran_riyal_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bulgar_leva_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/bulgar_leva_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/bulgarlevasi" />
+
+                    <TextView
+                        android:id="@+id/bulgar_leva_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/bulgar_leva_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/bulgar_leva_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/bulgar_leva_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/bulgar_leva_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nor_kron_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/nor_kron_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/norveckronu" />
+
+                    <TextView
+                        android:id="@+id/nor_kron_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/nor_kron_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/nor_kron_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/nor_kron_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/nor_kron_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pakistan_rupi_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="22dp">
+
+                    <ImageView
+                        android:id="@+id/pakistan_rupi_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/pakistanrupisi" />
+
+                    <TextView
+                        android:id="@+id/pakistan_rupi_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pakistan_rupi_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/pakistan_rupi_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/pakistan_rupi_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/pakistan_rupi_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/altinScreenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/mainscreen"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/doktorKarsilamaJson2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="60dp"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="doktor.json"
+                    app:lottie_loop="true"
+                    android:onClick="goSettings"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/muhendisKarsilamaJson2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="engineer.json"
+                    app:lottie_loop="true"
+                    android:onClick="goSettings"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/isadamiKarsilamaJson2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="isadami.json"
+                    app:lottie_loop="true"
+                    android:onClick="goSettings"/>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/iskadiniKarsilamaJson2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="bossgirl.json"
+                    app:lottie_loop="true"
+                    android:onClick="goSettings"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/calisanKarsilamaJson2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="calisan.json"
+                    app:lottie_loop="true"
+                    android:onClick="goSettings"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/ogrenciKarsilamaJson2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="ogrenci.json"
+                    app:lottie_loop="true"
+                    android:onClick="goSettings"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/digerKarsilamaJson2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="othermale.json"
+                    app:lottie_loop="true"
+                    android:onClick="goSettings"/>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/digerKadinKarsilamaJson2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-103dp"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="othergirl.json"
+                    app:lottie_loop="true"
+                    android:onClick="goSettings"/>
+
+                <TextView
+                    android:id="@+id/altinScreenKarsilamaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="130dp"
+                    android:text="Bu Ekranı Özelleştirmek İçin Uygulamayı Yeniden Başlat veya Meslek Animasyonunu Kullan!"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/bottomArrowJson2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="bottomarrowgold.json"
+                    app:lottie_loop="true"
+                    android:onClick="goBottomAltin"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/refresh_button2"
+                    android:layout_width="135dp"
+                    android:layout_height="103dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:onClick="getRates"
+                    app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+                    app:layout_constraintEnd_toEndOf="@+id/bottomBar"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="@+id/bottomBar"
+                    app:layout_constraintTop_toTopOf="@+id/bottomBar"
+                    app:layout_constraintVertical_bias="0.065"
+                    app:lottie_autoPlay="false"
+                    app:lottie_fileName="refreshbird.json"
+                    app:lottie_loop="false" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/gram_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/gram_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/gramaltin" />
+
+                    <TextView
+                        android:id="@+id/gram_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/gram_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/gram_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/gram_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/gram_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ceyrek_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/ceyrek_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ceyrekaltin" />
+
+                    <TextView
+                        android:id="@+id/ceyrek_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ceyrek_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/ceyrek_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/ceyrek_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/ceyrek_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/yarim_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/yarim_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/yarimaltin" />
+
+                    <TextView
+                        android:id="@+id/yarim_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/yarim_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/yarim_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/yarim_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/yarim_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/tam_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/tam_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/tamaltin" />
+
+                    <TextView
+                        android:id="@+id/tam_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tam_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/tam_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/tam_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/tam_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ons_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/ons_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/onsaltin" />
+
+                    <TextView
+                        android:id="@+id/ons_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ons_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/ons_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/ons_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/ons_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cmhr_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/cmhr_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/cmhraltini" />
+
+                    <TextView
+                        android:id="@+id/cmhr_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cmhr_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/cmhr_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/cmhr_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/cmhr_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ondort_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/ondort_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ondortaltin" />
+
+                    <TextView
+                        android:id="@+id/ondort_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ondort_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/ondort_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/ondort_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/ondort_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/onsekiz_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/onsekiz_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/onsekizaltin" />
+
+                    <TextView
+                        android:id="@+id/onsekiz_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/onsekiz_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/onsekiz_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/onsekiz_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/onsekiz_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/yirmiiki_bilezik_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/yirmiiki_bilezik_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/yirmikibilezik" />
+
+                    <TextView
+                        android:id="@+id/yirmiiki_bilezik_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/yirmiiki_bilezik_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/yirmiiki_bilezik_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/yirmiiki_bilezik_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/yirmiiki_bilezik_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/resat_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/resat_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/resataltin" />
+
+                    <TextView
+                        android:id="@+id/resat_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/resat_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/resat_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/resat_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/resat_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/hamit_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/hamit_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/hamitaltin" />
+
+                    <TextView
+                        android:id="@+id/hamit_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/hamit_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/hamit_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/hamit_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/hamit_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ikibucuk_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/ikibucuk_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ikibucukaltin" />
+
+                    <TextView
+                        android:id="@+id/ikibucuk_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ikibucuk_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/ikibucuk_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/ikibucuk_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/ikibucuk_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/besli_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/besli_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/beslialtin" />
+
+                    <TextView
+                        android:id="@+id/besli_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/besli_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/besli_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/besli_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/besli_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ata_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/ata_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ataaltin" />
+
+                    <TextView
+                        android:id="@+id/ata_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ata_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/ata_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/ata_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/ata_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/gremse_altin_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/gremse_altin_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/gramsealtin" />
+
+                    <TextView
+                        android:id="@+id/gremse_altin_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/gremse_altin_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/gremse_altin_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/gremse_altin_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/gremse_altin_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/gumus_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="22dp">
+
+                    <ImageView
+                        android:id="@+id/gumus_bcgr"
+                        android:layout_width="167dp"
+                        android:layout_height="42dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/gumus" />
+
+                    <TextView
+                        android:id="@+id/gumus_text"
+                        android:layout_width="200dp"
+                        android:layout_height="71dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Yahya Can Özdemir"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/gumus_bcgr"
+                        app:layout_constraintEnd_toEndOf="@+id/gumus_bcgr"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/gumus_bcgr"
+                        app:layout_constraintTop_toTopOf="@+id/gumus_bcgr"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+    <com.flarebit.flarebarlib.FlareBar
+        android:id="@+id/bottomBar"
+        android:background="@color/colorAccent"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:gravity="bottom"
+        />
+
+
+</FrameLayout>
