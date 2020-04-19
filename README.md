@@ -1,5 +1,6 @@
 # DovizKusuApp
 Android Yeni Nesil Altın ve Döviz Uygulaması
+Bu döviz uygulamamım amacı insanları sıkıcı ve alışılagelmiş liste görünümlü döviz ve altın uygulamalarından kurtararak onlara kendilerini özel hissedebilecekleri kişisel bir döviz asistanı ya da benim deyişimile döviz kuşu sunmaktır. Uygulama hakkında aklınıza takılanları veya beni geliştirecek her türlü yorumu "yahyacanozdemir@gmail.com" adresinden bana ulaştırabilirsiniz. 
 
 # Uygulama İçi Ekran Görüntüleri
 ![dovizKusuSS1](https://user-images.githubusercontent.com/43846778/79691366-bea5ca00-8267-11ea-8e02-0095b36cb5ee.png)
