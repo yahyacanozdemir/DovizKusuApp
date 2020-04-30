@@ -1,7 +1,13 @@
 # DovizKusuApp
-Android Yeni Nesil Altın ve Döviz Uygulaması
-Bu döviz uygulamamın amacı insanları sıkıcı ve alışılagelmiş liste görünümlü döviz ve altın uygulamalarından kurtararak onlara kendilerini özel hissedebilecekleri kişisel bir döviz asistanı ya da benim deyişimile döviz kuşu sunmaktır. Uygulama hakkında aklınıza takılanları veya beni geliştirecek her türlü yorumu yahyacanozdemir@gmail.com adresinden bana ulaştırabilirsiniz. 
 
+## Android Yeni Nesil Altın ve Döviz Uygulaması
+
+Bu döviz uygulamamın amacı insanları sıkıcı ve alışılagelmiş liste görünümlü döviz ve altın uygulamalarından kurtararak onlara kendilerini özel hissedebilecekleri kişisel bir döviz asistanı ya da benim deyişimile döviz kuşu sunmaktır. Uygulama hakkında aklınıza takılanları veya beni geliştirecek her türlü yorumu yahyacanozdemir@gmail.com adresinden bana ulaştırabilirsiniz. 
+-------------------------------------
+## Version, Android Sürüm Bilgilendirme 
+Döviz Kuşu version 1.0 çıktı! 
+Uygulamanın çalışabilmesi için android 7.0.1 veya daha üst sürüme sahip bir akıllı telefon gerekmektedir. Döviz Kuşu tarafımca güncellenmeye ve hatalarından arındırılmaya devam edecektir.Yeni sürümler için takipte kalın!
+-------------------------------------
 # Uygulama İçi Ekran Görüntüleri
 ![dovizKusuSS1](https://user-images.githubusercontent.com/43846778/79692161-56a5b280-826c-11ea-9f95-d759f90b2e15.png)
 ![dovizKusuSS2](https://user-images.githubusercontent.com/43846778/79692162-59080c80-826c-11ea-82d0-845e31fc6fb8.png)
@@ -18,5 +24,7 @@ Bu döviz uygulamamın amacı insanları sıkıcı ve alışılagelmiş liste g�
 ![dovizKusuSS12](https://user-images.githubusercontent.com/43846778/79692192-74731780-826c-11ea-9154-b091856d8421.png)
 ![dovizKusuSS13](https://user-images.githubusercontent.com/43846778/79692193-75a44480-826c-11ea-9e4e-4a694037d0aa.png)
 ![dovizKusuSS14](https://user-images.githubusercontent.com/43846778/79692194-76d57180-826c-11ea-9812-a497fd77c11b.png)
+
+    Döviz Kuşu Uygulama fikri ve kodları tümüyle Yahya Can Özdemir'e aittir. 
 
 
