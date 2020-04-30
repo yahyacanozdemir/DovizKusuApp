@@ -8,7 +8,7 @@ Bu döviz uygulamamın amacı insanları sıkıcı ve alışılagelmiş liste g�
 Döviz Kuşu version 1.0 çıktı! 
 Uygulamanın çalışabilmesi için android 7.0.1 veya daha üst sürüme sahip bir akıllı telefon gerekmektedir. Döviz Kuşu tarafımca güncellenmeye ve hatalarından arındırılmaya devam edecektir.Yeni sürümler için takipte kalın!
 
-## İndirme ve Test Bağlantısı
+## İndirme ve Test Bağlantısı(APK)
 https://drive.google.com/open?id=1mJVCFzshGruscUU03zaJAe0hpBD3TSOe
 
 # Uygulama İçi Ekran Görüntüleri
