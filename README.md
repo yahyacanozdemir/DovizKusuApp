@@ -3,7 +3,7 @@
 ## Android Yeni Nesil Altın ve Döviz Uygulaması
 
 Bu döviz uygulamamın amacı insanları sıkıcı ve alışılagelmiş liste görünümlü döviz ve altın uygulamalarından kurtararak onlara kendilerini özel hissedebilecekleri kişisel bir döviz asistanı ya da benim deyişimile döviz kuşu sunmaktır. Uygulama hakkında aklınıza takılanları veya beni geliştirecek her türlü yorumu yahyacanozdemir@gmail.com adresinden bana ulaştırabilirsiniz. 
--------------------------------------
+
 ## Version, Android Sürüm Bilgilendirme 
 Döviz Kuşu version 1.0 çıktı! 
 Uygulamanın çalışabilmesi için android 7.0.1 veya daha üst sürüme sahip bir akıllı telefon gerekmektedir. Döviz Kuşu tarafımca güncellenmeye ve hatalarından arındırılmaya devam edecektir.Yeni sürümler için takipte kalın!
