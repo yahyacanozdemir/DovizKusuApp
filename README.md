@@ -12,9 +12,14 @@ Uygulamanın çalışabilmesi için android 7.0.1 veya daha üst sürüme sahip 
 https://drive.google.com/file/d/1Ks0I96_goe4HWz871FjUUrhza0U3vdpD/view?usp=sharing
 
 # Uygulama İçi Ekran Görüntüleri
-![cover1](https://user-images.githubusercontent.com/43846778/98019617-09a5ba00-1e13-11eb-8524-b59f82aa9417.jpg)
-![cover2](https://user-images.githubusercontent.com/43846778/98019706-23470180-1e13-11eb-96a8-0c8c6124a8a8.jpg)
-![cover3](https://user-images.githubusercontent.com/43846778/98020095-98b2d200-1e13-11eb-929b-4f34f7970733.jpg)
+![cover1_3](https://user-images.githubusercontent.com/43846778/98045534-b09d4c80-1e39-11eb-8714-126df060c3eb.jpg)
+![cover2_4](https://user-images.githubusercontent.com/43846778/98045542-b4c96a00-1e39-11eb-9b94-8bc05904e98f.jpg)
+![cover3_1](https://user-images.githubusercontent.com/43846778/98045556-b98e1e00-1e39-11eb-82c0-99b6904963d0.jpg)
+
+
+
+
+
 
 
 
