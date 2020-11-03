@@ -4,52 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splashscreen"
+    android:background="@drawable/splash"
     tools:context=".splash_screen">
 
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/coinfall"
-        android:layout_width="461dp"
-        android:layout_height="426dp"
+        android:layout_width="270dp"
+        android:layout_height="208dp"
         android:layout_gravity="center"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/birds"
+        app:layout_constraintVertical_bias="0.445"
         app:lottie_autoPlay="true"
         app:lottie_fileName="coinfall.json"
         app:lottie_loop="true" />
 
-    <com.airbnb.lottie.LottieAnimationView
+    <ImageView
         android:id="@+id/birds"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
+        android:layout_width="140dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/baslik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/baslik"
+        android:layout_width="292dp"
+        android:layout_height="338dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065"
-        app:lottie_autoPlay="true"
-        app:lottie_fileName="birds.json"
-        app:lottie_loop="true" />
+        app:layout_constraintVertical_bias="0.42"
+        app:srcCompat="@drawable/title" />
 
     <ImageView
-        android:id="@+id/baslik"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:id="@+id/signature"
+        android:layout_width="240dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baslik" />
+        app:layout_constraintTop_toBottomOf="@+id/coinfall"
+        app:layout_constraintVertical_bias="0.898"
+        app:srcCompat="@drawable/logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
 
@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/firstscreen"
-        android:visibility="visible">
+        android:visibility="visible"
+        android:layout_gravity="center">
+
 
         <LinearLayout
             android:id="@+id/baslangicSorusuLayout"
@@ -66,34 +68,35 @@
 
         <LinearLayout
             android:id="@+id/ilkkisim"
-            android:layout_width="wrap_content"
-            android:layout_height="203dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
             android:layout_marginLeft="0dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="0dp"
+            android:textAlignment="center"
             android:visibility="invisible">
 
             <TextView
                 android:id="@+id/cinsiyet_textview"
-                android:layout_width="wrap_content"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="125dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="90dp"
                 android:fontFamily="casual"
-                android:text="Baslayalım Cinsiyetin Nedir?"
+                android:text="Başlayalım, Cinsiyetin Nedir?"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textStyle="bold" />
+                android:textSize="25dp"
+                android:textStyle="bold"/>
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/male_json"
                 android:layout_width="135dp"
                 android:layout_height="103dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="-370dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginLeft="-430dp"
+                android:layout_marginTop="100dp"
                 android:onClick="maleClicked"
-                android:textAlignment="center"
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="happyusermale.json"
                 app:lottie_loop="true" />
@@ -102,11 +105,9 @@
                 android:id="@+id/female_json"
                 android:layout_width="135dp"
                 android:layout_height="103dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="95dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="100dp"
                 android:onClick="femaleClicked"
-                android:textAlignment="center"
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="happyuserfemale.json"
                 app:lottie_loop="true" />
@@ -116,36 +117,39 @@
         <LinearLayout
             android:id="@+id/ikincikisim"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
             android:layout_marginLeft="0dp"
-            android:layout_marginTop="83dp"
-            android:layoutMode="opticalBounds"
+            android:layout_marginTop="0dp"
             android:textAlignment="center"
             android:visibility="invisible">
 
             <TextView
                 android:id="@+id/isim_textview"
-                android:layout_width="wrap_content"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="165dp"
-                android:layout_marginTop="185dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginRight="90dp"
                 android:fontFamily="casual"
                 android:text="Peki ya Ismin?"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textStyle="bold" />
+                android:textSize="25dp"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/isimalici"
                 android:layout_width="290dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="-290dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="-430dp"
+                android:layout_marginTop="100dp"
                 android:hint="Sadece İsim Giriniz"
-                android:layout_marginTop="220dp"
+                android:imeOptions="actionDone"
                 android:maxLength="25"
                 android:maxLines="1"
                 android:singleLine="true" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -166,78 +170,79 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="90dp"
                 android:fontFamily="casual"
-                android:textSize="25dp"
                 android:text="Son Olarak Ne Isle Mesgulsun?"
                 android:textAlignment="center"
                 android:textAllCaps="false"
+                android:textSize="25dp"
                 android:textStyle="bold" />
 
-        <LinearLayout
-            android:id="@+id/meslekImageLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="-485dp">
+            <LinearLayout
+                android:id="@+id/meslekImageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-485dp"
+                android:layout_marginTop="-50dp">
 
-            <ImageView
-                android:id="@+id/doktor"
-                android:layout_width="167dp"
-                android:layout_height="42dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="200dp"
-                android:background="@drawable/doktor"
-                android:onClick="doktorButton" />
+                <ImageView
+                    android:id="@+id/doktor"
+                    android:layout_width="167dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="200dp"
+                    android:background="@drawable/doktor"
+                    android:onClick="doktorButton" />
 
-            <ImageView
-                android:id="@+id/muhendis"
-                android:layout_width="167dp"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="200dp"
-                android:background="@drawable/muhendis"
-                android:onClick="muhendisButton" />
+                <ImageView
+                    android:id="@+id/muhendis"
+                    android:layout_width="167dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="200dp"
+                    android:background="@drawable/muhendis"
+                    android:onClick="muhendisButton" />
 
-            <ImageView
-                android:id="@+id/isadami"
-                android:layout_width="167dp"
-                android:layout_height="42dp"
-                android:layout_marginStart="-345dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="270dp"
-                android:background="@drawable/isadami"
-                android:onClick="isadamiButton" />
+                <ImageView
+                    android:id="@+id/isadami"
+                    android:layout_width="167dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="-345dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="270dp"
+                    android:background="@drawable/isadami"
+                    android:onClick="isadamiButton" />
 
-            <ImageView
-                android:id="@+id/calisan"
-                android:layout_width="167dp"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="270dp"
-                android:background="@drawable/calisan"
-                android:onClick="calisanButton" />
+                <ImageView
+                    android:id="@+id/calisan"
+                    android:layout_width="167dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="270dp"
+                    android:background="@drawable/calisan"
+                    android:onClick="calisanButton" />
 
-            <ImageView
-                android:id="@+id/ogrenci"
-                android:layout_width="167dp"
-                android:layout_height="42dp"
-                android:layout_marginStart="-345dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="340dp"
-                android:background="@drawable/ogrnc"
-                android:onClick="ogrenciButton" />
+                <ImageView
+                    android:id="@+id/ogrenci"
+                    android:layout_width="167dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="-345dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="340dp"
+                    android:background="@drawable/ogrnc"
+                    android:onClick="ogrenciButton" />
 
-            <ImageView
-                android:id="@+id/diger"
-                android:layout_width="167dp"
-                android:layout_height="42dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="340dp"
-                android:background="@drawable/diger"
-                android:onClick="digerButton" />
+                <ImageView
+                    android:id="@+id/diger"
+                    android:layout_width="167dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="340dp"
+                    android:background="@drawable/diger"
+                    android:onClick="digerButton" />
+            </LinearLayout>
+
         </LinearLayout>
 
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/lottieButtonsLayout"
@@ -342,6 +347,7 @@
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="isadami.json"
                 app:lottie_loop="true" />
+
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/isKadiniLottie"
                 android:layout_width="135dp"
@@ -401,6 +407,7 @@
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="othermale.json"
                 app:lottie_loop="true" />
+
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/digerKadinLottie"
                 android:layout_width="135dp"
@@ -548,15 +555,23 @@
                     app:lottie_loop="true"
                     tools:visibility="invisible" />
 
+
+
+
                 <TextView
                     android:id="@+id/dovizScreenKarsilamaText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="0dp"
-                    android:layout_marginTop="130dp"
-                    android:text="Bu Ekranı Özelleştirmek İçin Uygulamayı Yeniden Başlat veya Meslek Animasyonunu Kullan!"
+                    android:layout_marginTop="110dp"
+                    android:onClick="goSettings"
+                    android:text="Bu Ekranı Özelleştirmek İçin Buraya Tıkla"
                     android:textAlignment="center"
-                    android:textSize="25dp" />
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:background="@color/cardview_light_background" />
+
+
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/bottomArrowJson"
@@ -618,7 +633,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/abd_dollar_bcgr"
@@ -656,7 +671,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/euro_bcgr"
@@ -694,7 +709,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/sterlin_bcgr"
@@ -733,7 +748,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/yuan_bcgr"
@@ -771,7 +786,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ruble_bcgr"
@@ -809,7 +824,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/au_dollar_bcgr"
@@ -847,7 +862,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/japon_bcgr"
@@ -885,7 +900,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/dan_kronu_bcgr"
                         app:layout_constraintEnd_toEndOf="@+id/dan_kronu_bcgr"
@@ -922,7 +937,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/dinar_bcgr"
@@ -960,7 +975,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/frang_bcgr"
@@ -998,7 +1013,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/riyal_bcgr"
@@ -1036,7 +1051,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/isvicre_kron_bcgr"
@@ -1074,7 +1089,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/cnd_dollar_bcgr"
@@ -1112,7 +1127,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/katar_riyal_bcgr"
@@ -1150,7 +1165,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/iran_riyal_bcgr"
@@ -1188,7 +1203,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/bulgar_leva_bcgr"
@@ -1226,7 +1241,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/nor_kron_bcgr"
@@ -1264,7 +1279,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/pakistan_rupi_bcgr"
@@ -1301,11 +1316,11 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="60dp"
+                    android:onClick="goSettings"
                     android:visibility="invisible"
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="doktor.json"
-                    app:lottie_loop="true"
-                    android:onClick="goSettings"/>
+                    app:lottie_loop="true" />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/muhendisKarsilamaJson2"
@@ -1314,11 +1329,11 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
                     android:visibility="invisible"
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="engineer.json"
-                    app:lottie_loop="true"
-                    android:onClick="goSettings"/>
+                    app:lottie_loop="true" />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/isadamiKarsilamaJson2"
@@ -1327,11 +1342,12 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
                     android:visibility="invisible"
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="isadami.json"
-                    app:lottie_loop="true"
-                    android:onClick="goSettings"/>
+                    app:lottie_loop="true" />
+
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/iskadiniKarsilamaJson2"
                     android:layout_width="135dp"
@@ -1339,11 +1355,11 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
                     android:visibility="invisible"
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="bossgirl.json"
-                    app:lottie_loop="true"
-                    android:onClick="goSettings"/>
+                    app:lottie_loop="true" />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/calisanKarsilamaJson2"
@@ -1352,11 +1368,11 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
                     android:visibility="invisible"
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="calisan.json"
-                    app:lottie_loop="true"
-                    android:onClick="goSettings"/>
+                    app:lottie_loop="true" />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/ogrenciKarsilamaJson2"
@@ -1365,11 +1381,11 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
                     android:visibility="invisible"
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="ogrenci.json"
-                    app:lottie_loop="true"
-                    android:onClick="goSettings"/>
+                    app:lottie_loop="true" />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/digerKarsilamaJson2"
@@ -1378,11 +1394,12 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
                     android:visibility="invisible"
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="othermale.json"
-                    app:lottie_loop="true"
-                    android:onClick="goSettings"/>
+                    app:lottie_loop="true" />
+
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/digerKadinKarsilamaJson2"
                     android:layout_width="135dp"
@@ -1390,11 +1407,11 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="-103dp"
+                    android:onClick="goSettings"
                     android:visibility="invisible"
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="othergirl.json"
-                    app:lottie_loop="true"
-                    android:onClick="goSettings"/>
+                    app:lottie_loop="true" />
 
                 <TextView
                     android:id="@+id/altinScreenKarsilamaText"
@@ -1402,8 +1419,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="130dp"
-                    android:text="Bu Ekranı Özelleştirmek İçin Uygulamayı Yeniden Başlat veya Meslek Animasyonunu Kullan!"
+                    android:onClick="goSettings"
+                    android:text="Bu Ekranı Özelleştirmek İçin Buraya Tıkla"
+                    android:background="@color/cardview_light_background"
                     android:textAlignment="center"
+                    android:textColor="@color/black"
                     android:textSize="25dp" />
 
                 <com.airbnb.lottie.LottieAnimationView
@@ -1413,10 +1433,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="0dp"
+                    android:onClick="goBottomAltin"
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="bottomarrowgold.json"
-                    app:lottie_loop="true"
-                    android:onClick="goBottomAltin"/>
+                    app:lottie_loop="true" />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/refresh_button2"
@@ -1467,7 +1487,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/gram_altin_bcgr"
@@ -1505,7 +1525,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ceyrek_altin_bcgr"
@@ -1543,7 +1563,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/yarim_altin_bcgr"
@@ -1582,7 +1602,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tam_altin_bcgr"
@@ -1620,7 +1640,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ons_altin_bcgr"
@@ -1658,7 +1678,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/cmhr_altin_bcgr"
@@ -1696,7 +1716,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ondort_altin_bcgr"
@@ -1734,7 +1754,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/onsekiz_altin_bcgr"
@@ -1772,7 +1792,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/yirmiiki_bilezik_bcgr"
@@ -1810,7 +1830,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/resat_altin_bcgr"
@@ -1848,7 +1868,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/hamit_altin_bcgr"
@@ -1886,7 +1906,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ikibucuk_altin_bcgr"
@@ -1924,7 +1944,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/besli_altin_bcgr"
@@ -1962,7 +1982,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ata_altin_bcgr"
@@ -2000,7 +2020,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/gremse_altin_bcgr"
@@ -2038,7 +2058,7 @@
                         android:layout_width="200dp"
                         android:layout_height="71dp"
                         android:gravity="center_horizontal|center_vertical"
-                        android:text="Yahya Can Özdemir"
+                        android:text="Fiyat Bilgisi Yok"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/gumus_bcgr"
@@ -2059,16 +2079,15 @@
 
     <com.flarebit.flarebarlib.FlareBar
         android:id="@+id/bottomBar"
-        android:background="@color/colorAccent"
-        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorAccent"
         android:gravity="bottom"
-        />
+        android:visibility="visible" />
 
 
 </FrameLayout>

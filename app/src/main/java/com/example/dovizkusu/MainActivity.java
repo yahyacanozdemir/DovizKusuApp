@@ -1,17 +1,17 @@
 package com.example.dovizkusu;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.SharedMemory;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -29,7 +29,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Timer;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -188,6 +187,16 @@ public class MainActivity extends AppCompatActivity {
         hideDefaultNavBar();
         createBottomMenu();
 
+        /*
+        isimaliciET.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(keyCode==)
+                return false;
+            }
+        });
+*/
+
     }
 
     public void firstScreenControl(){
@@ -218,6 +227,7 @@ public class MainActivity extends AppCompatActivity {
         digerLT.setVisibility(View.INVISIBLE);
         baslangicLY.setVisibility(View.INVISIBLE);
         ilkkisimLY.setVisibility(View.VISIBLE);
+        ilksoruTV.setVisibility(View.VISIBLE);
     }
     public void crossClicked(View view){
         hideDefaultNavBar();
@@ -242,27 +252,36 @@ public class MainActivity extends AppCompatActivity {
     }
     public void editTextisOkey() {
         hideDefaultNavBar();
-        new CountDownTimer(10000, 1000) {
+
+
+        isimaliciET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
             @Override
-            public void onTick(long millisUntilFinished) {
-                hideDefaultNavBar();
-                isimaliciET.setError("Lütfen "+millisUntilFinished/1000+" Saniye içinde"+"Alanı Doldurunuz");
-            }
-            @Override
-            public void onFinish() {
-                hideDefaultNavBar();
-                isimaliciET.setError("");
-                isimSTR = isimaliciET.getText().toString();
-                if (!isimSTR.toString().isEmpty()) {
-                    ikincikisimLY.setVisibility(View.INVISIBLE);
-                    sonkisimLY.setVisibility(View.VISIBLE);
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    isimSTR = isimaliciET.getText().toString();
+                    if (!isimSTR.toString().isEmpty()) {
+                        ikincikisimLY.setVisibility(View.INVISIBLE);
+                        sonkisimLY.setVisibility(View.VISIBLE);
+                    }
+                    else if (isimSTR.toString().isEmpty()) {
+                        layoutDovizLY.setVisibility(View.VISIBLE);
+                        Toast.makeText(MainActivity.this,"Kişisel Bilgiler Alinmadi",Toast.LENGTH_SHORT).show();
+                    }
+                    InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                    return true;
                 }
-                else if (isimSTR.toString().isEmpty()) {
-                    layoutDovizLY.setVisibility(View.VISIBLE);
-                    Toast.makeText(MainActivity.this,"Kişisel Bilgiler Alinmadi",Toast.LENGTH_SHORT).show();
-                }
+                return false;
             }
-        }.start();
+        });
+
+
+
+
+
+
+
     }
     public void doktorButton(View view){
         hideDefaultNavBar();
@@ -466,12 +485,12 @@ public class MainActivity extends AppCompatActivity {
             calisanLT.setVisibility(View.VISIBLE);
             isimSTR = isimSTR.toUpperCase();
             if(maleBool==true) {
-                karsilaTV.setText("Merhaba Emektar Bey! Döviz Kurları Icin Sola Altın Kurları Icin Saga Gidebilirsin");
+                karsilaTV.setText("Merhaba Emektar! Döviz Kurları Icin Sola Altın Kurları Icin Saga Gidebilirsin");
                 dovizScreenKarsilamaTV.setText("Sayın Emektar " + isimSTR + " Bey Sizin İçin Bugünki Kurları Derledik. Aşağıdan Göz Atabilirsiniz");
                 altinScreenKarsilamaTV.setText("Sayın Emektar " + isimSTR + " Bey Sizin İçin Bugünki Kurları Derledik. Aşağıdan Göz Atabilirsiniz");
             }
             if(maleBool==false) {
-                karsilaTV.setText("Merhaba Emektar Hanım! Döviz Kurları Icin Sola Altın Kurları Icin Saga Gidebilirsin");
+                karsilaTV.setText("Merhaba Emektar! Döviz Kurları Icin Sola Altın Kurları Icin Saga Gidebilirsin");
                 dovizScreenKarsilamaTV.setText("Sayın Emektar " + isimSTR + " Hanım Sizin İçin Bugünki Kurları Derledik. Aşağıdan Göz Atabilirsiniz");
                 altinScreenKarsilamaTV.setText("Sayın Emektar " + isimSTR + " Hanım Sizin İçin Bugünki Kurları Derledik. Aşağıdan Göz Atabilirsiniz");
             }
@@ -989,6 +1008,7 @@ public class MainActivity extends AppCompatActivity {
                 pakistan_rupi.setText(pakistan_string);
 
 
+                //Altın Kurları Başlangıcı
 
                 JSONObject gram_atin_json = new JSONObject(s) ;
                 String gram_atin_string = gram_atin_json.getString("Gram Altın");
@@ -1210,12 +1230,6 @@ public class MainActivity extends AppCompatActivity {
                     gumus_string = gumus_string.replace('}',' ');
                 }
                 gumus.setText(gumus_string);
-
-
-
-
-
-
 
 
             }catch (Exception e){
