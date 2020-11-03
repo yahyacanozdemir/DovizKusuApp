@@ -9,7 +9,7 @@ Döviz Kuşu version 1.0 çıktı!
 Uygulamanın çalışabilmesi için android 7.0.1 veya daha üst sürüme sahip bir akıllı telefon gerekmektedir. Döviz Kuşu tarafımca güncellenmeye ve hatalarından arındırılmaya devam edecektir.Yeni sürümler için takipte kalın!
 
 ## İndirme ve Test Bağlantısı(APK)
-https://drive.google.com/open?id=1mJVCFzshGruscUU03zaJAe0hpBD3TSOe
+https://drive.google.com/file/d/1Ks0I96_goe4HWz871FjUUrhza0U3vdpD/view?usp=sharing
 
 # Uygulama İçi Ekran Görüntüleri
 ![cover1](https://user-images.githubusercontent.com/43846778/98019617-09a5ba00-1e13-11eb-8524-b59f82aa9417.jpg)
